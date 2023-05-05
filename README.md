@@ -61,7 +61,7 @@ Start the server
 <img width="896" alt="image" src="https://user-images.githubusercontent.com/111975032/236386521-096f846f-5e27-4c5d-a52b-575e61682ff6.png">
 
 ### About Page
-<img width="901" alt="image" src="https://user-images.githubusercontent.com/111975032/236386561-cacdecd3-3f91-46ee-a0bf-76402d0e5c46.png">
+<img width="895" alt="image" src="https://user-images.githubusercontent.com/111975032/236391732-f93a7ddb-95a3-48c7-a02c-99da62f5447e.png">
 
 ### Authors:
 - [@Sachin Choudhary](https://github.com/Sach-123)
