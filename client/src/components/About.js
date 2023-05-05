@@ -39,26 +39,6 @@ export default function About() {
             </div>
             <div className="p-4 lg:w-1/5 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
-                <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Harsh} />
-                <div className="w-full">
-                  <h2 className="title-font font-medium text-lg text-gray-900">Harsh Karira</h2>
-                  <h3 className="text-gray-500 mb-3">UI Developer</h3>
-                  <span className="inline-flex">
-                    <Link to='mailto:2020.harsh.karira@ves.ac.in'>
-                      <EmailIcon />
-                    </Link>
-                    <Link to="https://in.linkedin.com/in/harsh-karira-9b96471bb" className="ml-2">
-                      <LinkedInIcon />
-                    </Link>
-                    <Link to="https://github.com/Harshkarira" className="ml-2">
-                      <GitHubIcon/>
-                    </Link>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="p-4 lg:w-1/5 md:w-1/2">
-              <div className="h-full flex flex-col items-center text-center">
                 <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Sachin} />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-gray-900">Sachin Choudhary</h2>
@@ -77,6 +57,27 @@ export default function About() {
                 </div>
               </div>
             </div>
+            <div className="p-4 lg:w-1/5 md:w-1/2">
+              <div className="h-full flex flex-col items-center text-center">
+                <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Harsh} />
+                <div className="w-full">
+                  <h2 className="title-font font-medium text-lg text-gray-900">Harsh Karira</h2>
+                  <h3 className="text-gray-500 mb-3">UI Developer</h3>
+                  <span className="inline-flex">
+                    <Link to='mailto:2020.harsh.karira@ves.ac.in'>
+                      <EmailIcon />
+                    </Link>
+                    <Link to="https://in.linkedin.com/in/harsh-karira-9b96471bb" className="ml-2">
+                      <LinkedInIcon />
+                    </Link>
+                    <Link to="https://github.com/Harshkarira" className="ml-2">
+                      <GitHubIcon/>
+                    </Link>
+                  </span>
+                </div>
+              </div>
+            </div>
+            
             <div className="p-4 lg:w-1/5 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
                 <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Siddhant} />
