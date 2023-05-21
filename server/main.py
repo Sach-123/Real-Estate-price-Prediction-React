@@ -1,7 +1,11 @@
 import pickle
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import pandas as pd
+
 app = Flask(__name__)
+CORS(app, resources={r"/predict": {"origins": "https://real-estate-price-prediction-react-frontend.vercel.app"}})
+
 
 pipe_Mumbai = pickle.load(open("XGB_Mumbai.pkl","rb"))
 
