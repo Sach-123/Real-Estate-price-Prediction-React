@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 export default function Map() {
-  const myStyle = {
-    backgroundImage:"url('https://wallpapersmug.com/download/1440x900/d0155e/bridge-cityscape-pixel-art.jpg')",
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-  };
-  return (
+  const [isMobile, setIsMobile] = useState(false);
 
-    <div className='map' style={myStyle}>
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 570);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  const mapStyle = {
+    backgroundImage: isMobile
+      ? 'none' // Replace with your mobile image link
+      : 'url("https://wallpapersmug.com/download/1440x900/d0155e/bridge-cityscape-pixel-art.jpg")',
+  };
+
+  return (
+    <div className="map" style={mapStyle}>
       <Navbar />
       <div className="container py-20 mx-auto ">
         <div className="flex flex-wrap pl-1">
