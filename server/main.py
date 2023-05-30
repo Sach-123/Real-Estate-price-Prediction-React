@@ -7,15 +7,6 @@ app = Flask(__name__)
 CORS(app)
 
 
-pipe_Mumbai = pickle.load(open("XGB_Mumbai.pkl","rb"))
-
-pipe_Bangalore = pickle.load(open("XGB_Bangalore.pkl","rb"))
-
-pipe_Chennai = pickle.load(open("XGB_Chennai.pkl","rb"))
-
-pipe_Delhi = pickle.load(open("XGB_Delhi.pkl","rb"))
-
-
 @app.route("/predict",methods=["POST","GET"]) # to get form data and apply ML model for prediction.
 def predict():
     city = request.form.get("city")
@@ -25,6 +16,7 @@ def predict():
     print(city, location, bhk, area) # print the form data on terminal
     
     if city=="Mumbai" :
+        pipe_Mumbai = pickle.load(open("XGB_Mumbai.pkl","rb"))
         input = pd.DataFrame([[location,area,bhk]],columns=["location","area","bhk"])        
         prediction = pipe_Mumbai.predict(input)[0]
         return jsonify(
@@ -35,6 +27,7 @@ def predict():
         )
     
     elif city=="Bangalore":
+        pipe_Bangalore = pickle.load(open("XGB_Bangalore.pkl","rb"))
         input = pd.DataFrame([[location,area,bhk]],columns=["location","area","bhk"])
         prediction = pipe_Bangalore.predict(input)[0]
         return jsonify(
@@ -45,6 +38,8 @@ def predict():
         )
     
     elif city=="Chennai":
+        pipe_Delhi = pickle.load(open("XGB_Delhi.pkl","rb"))
+        pipe_Chennai = pickle.load(open("XGB_Chennai.pkl","rb"))
         input = pd.DataFrame([[location,area,bhk]],columns=["location","area","bhk"])
         prediction = pipe_Chennai.predict(input)[0]
         
