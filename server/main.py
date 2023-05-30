@@ -8,6 +8,10 @@ CORS(app)
 
 cors=CORS(app,resources={r'*':{'origins':'*'}})
 
+@app.route("/",methods=["POST","GET"])
+def test():
+    return "Hi"
+
 
 @app.route("/predict",methods=["POST","GET"]) # to get form data and apply ML model for prediction.
 def predict():
