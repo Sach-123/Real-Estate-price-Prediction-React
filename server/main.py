@@ -6,6 +6,8 @@ import pandas as pd
 app = Flask(__name__)
 CORS(app)
 
+cors=CORS(app,resources={r'*':{'origins':'*'}})
+
 
 @app.route("/predict",methods=["POST","GET"]) # to get form data and apply ML model for prediction.
 def predict():
