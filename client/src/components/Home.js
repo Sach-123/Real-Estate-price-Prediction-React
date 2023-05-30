@@ -17,7 +17,7 @@ const PropertyForm = () => {
     formData.append('location', location);
     formData.append('bhk', bhk);
     formData.append('squareFeet', squareFeet);
-    const response = await fetch('/predict', {
+    const response = await fetch('https://real-estate-price-prediction-react-flask.vercel.app/predict', {
       method: 'POST',
       body: formData,
     });
