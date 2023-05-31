@@ -20,8 +20,10 @@ const PropertyForm = () => {
     const response = await fetch('https://real-estate-price-prediction-react-flask.vercel.app/predict', {
       method: 'POST',
       body: formData,
+      mode: "no-cors",
     });
     const data = await response.json();
+
     console.log(data);
     setPrediction(data.prediction);
     setRate(data.rate)
@@ -111,8 +113,8 @@ const PropertyForm = () => {
                 value={bhk}
                 onChange={handleBhkChange}
                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                id="inline-bhk" 
-                min= "1"
+                id="inline-bhk"
+                min="1"
                 required />
             </div>
           </div>
@@ -129,8 +131,8 @@ const PropertyForm = () => {
                 value={squareFeet}
                 onChange={handleSquareFeetChange}
                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                id="inline-sqfeet" 
-                min= "120"
+                id="inline-sqfeet"
+                min="120"
                 required />
             </div>
           </div>
