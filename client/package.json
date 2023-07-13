@@ -1,8 +1,8 @@
 {
   "name": "client",
+  "proxy":"http://127.0.0.1:5000/",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://real-estate-price-prediction-react-flask.vercel.app/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
